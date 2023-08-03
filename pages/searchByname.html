@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | FlavorFusion</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <a href="/"><img src="../img/logo.png" alt="" width="30%"></a>
+        <div>
+            <a class="active" href="../pages/searchByname.html">🔍 by Name</a>
+            <a href="../pages/category.html">Categories</a>
+            <a href="../pages/area.html">Area</a>
+            <a href="../pages/ingredient.html">Ingredients</a>
+        </div>
+
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Search Section -->
+        <section id="search">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search for recipes...">
+                <button id="search-btn" onclick="searchbyname()"><img src="../img/search.png" alt="" width="30rem"></button>
+            </div>
+        </section>
+
+        <!-- Recipe Section -->
+        <section id="recipe"></section>
+    </main>
+
+
+    <!-- Load JavaScript files asynchronously -->
+    <script async src="../js/food-api.js"></script>
+    <script async src="../js/food-widget.js"></script>
+</body>
+
+</html>
