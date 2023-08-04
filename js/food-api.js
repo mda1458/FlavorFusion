@@ -1,5 +1,4 @@
 async function getFood() {
-  console.log("getFood");
   const url = "https://www.themealdb.com/api/json/v1/1/random.php";
   const response = await fetch(url);
   const data = await response.json();
@@ -7,18 +6,19 @@ async function getFood() {
 }
 
 async function getAllCat() {
-  console.log("getAllCat");
   const url = "https://www.themealdb.com/api/json/v1/1/list.php?c=list";
   const response = await fetch(url);
   const data = await response.json();
   return data.meals;
 }
+
 async function getAllArea() {
   const url = "https://www.themealdb.com/api/json/v1/1/list.php?a=list";
   const response = await fetch(url);
   const data = await response.json();
   return data.meals;
 }
+
 async function getAllIngred() {
   const url = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
   const response = await fetch(url);

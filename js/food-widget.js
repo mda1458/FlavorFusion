@@ -162,9 +162,6 @@ function displayAreaSearch(recipe, id) {
 
 }
 
-
-
-
 // Fetch all things from API on load
 window.onload = function () {
   // get random recipe
@@ -191,11 +188,10 @@ window.onload = function () {
 
   // get all ingredients
   getAllIngred().then((ingredients) => {
-    console.log(ingredients);
     ingredients.forEach((ingredient) => {
       displayIngredients(ingredient, "ingredient-list");
     });
-  });
+  })
 };
 
 
@@ -216,6 +212,7 @@ function searchbyname() {
   });
 
 }
+
 function searchbycategory() {
   // delete previous recipes list
   const recipeSection = document.getElementById("category-list");

@@ -14,8 +14,14 @@
 </head>
 
 <body>
+    <div id="google_translate_element" style="
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        "></div>
     <!-- Header -->
-    <div class="header">
+    <header>
         <a href="/"><img src="../img/logo.png" alt="" width="30%"></a>
         <div>
             <a class="active" href="../pages/searchByname.html">🔍 by Name</a>
@@ -24,7 +30,7 @@
             <a href="../pages/ingredient.html">Ingredients</a>
         </div>
 
-    </div>
+    </header>
 
     <!-- Main Content -->
     <main>
@@ -44,6 +50,15 @@
     <!-- Load JavaScript files asynchronously -->
     <script async src="../js/food-api.js"></script>
     <script async src="../js/food-widget.js"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

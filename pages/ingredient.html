@@ -14,8 +14,14 @@
 </head>
 
 <body>
+    <div id="google_translate_element" style="
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        "></div>
     <!-- Header -->
-    <div class="header">
+    <header>
         <a href="/"><img src="../img/logo.png" alt="" width="30%"></a>
         <div>
             <a href="../pages/searchByname.html">🔍 by Name</a>
@@ -24,18 +30,10 @@
             <a class="active" href="../pages/ingredient.html">Ingredients</a>
         </div>
 
-    </div>
+    </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Search Section -->
-        <section id="search">
-            <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Search for recipes...">
-                <button id="search-btn" onclick="searchbyingredients()"><img src="../img/search.png" alt=""
-                        width="30rem"></button>
-            </div>
-        </section>
     
         <!-- Category Section -->
         <section id="ingredient-list"></section>
@@ -44,10 +42,19 @@
         <section id="ingredient"></section>
     
         <!-- Load JavaScript files asynchronously -->
-        <script async src="../js/food-api.js"></script>
-        <script async src="../js/food-widget.js"></script>
     </main>
 
+    <script async src="../js/food-api.js"></script>
+    <script async src="../js/food-widget.js"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

@@ -62,7 +62,7 @@ body {
   margin-bottom: 30px;
 }
 
-.header {
+header {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -78,20 +78,20 @@ body {
 
 }
 
-.header a {
+header a {
   display: flex;
   justify-content: center;
 }
 
-.header div {
+header div {
   display: flex;
   justify-content: space-around;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-.header a,
-.header div a {
+header a,
+header div a {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -210,6 +210,11 @@ main {
   width: 20%;
   background: #838383;
   border-radius: 1rem;
+  cursor:pointer;
+
+  &:hover {
+    scale:1.02
+  }
 }
 
 .category img {
@@ -258,6 +263,11 @@ main {
   width: 20%;
   background: #838383;
   border-radius: 1rem;
+  cursor:pointer;
+
+  &:hover {
+    scale:1.02
+  }
 }
 
 .area img {
@@ -306,6 +316,11 @@ main {
   width: 20%;
   background: #838383;
   border-radius: 1rem;
+  cursor:pointer;
+
+  &:hover {
+    scale:1.02
+  }
 }
 
 .ingredient img {
@@ -319,7 +334,23 @@ main {
   color: #8A1E53
 }
 
+/* Language */
+.goog-te-combo {
+  display: block!important;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  outline: none;
+  box-shadow: #ccc 10px 10px 10px;
+  &:hover {
+    border-color: #8A1E53;
+  }
+}
 
+.goog-te-gadget {
+  font-size: 0!important;
+}
 
-
-
+.goog-te-gadget span {
+  display: none;
+}
